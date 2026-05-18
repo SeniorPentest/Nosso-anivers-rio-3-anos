@@ -41,26 +41,6 @@ function animateHearts(time) {
   requestAnimationFrame(animateHearts);
 }
 
-function getTomorrowMidnight() {
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  tomorrow.setHours(0, 0, 0, 0);
-  return tomorrow;
-}
-
-function updateCountdown() {
-  const now = new Date();
-  const target = getTomorrowMidnight();
-  const diff = Math.max(target - now, 0);
-  const hours = Math.floor(diff / (1000 * 60 * 60));
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
-}
-
 function calculateDaysTogether() {
   const today = new Date();
   const days = Math.floor((today - START_DATE) / (1000 * 60 * 60 * 24));
@@ -150,12 +130,10 @@ function initSmoothScroll() {
 
 window.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(animateHearts);
-  updateCountdown();
   calculateDaysTogether();
   revealTimelineWithObserver();
   initMapInteractions();
   initSmoothScroll();
-  setInterval(updateCountdown, 1000);
 });
 
 window.addEventListener("load", () => {

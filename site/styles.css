@@ -186,45 +186,6 @@ h2 {
   word-break: break-word;
 }
 
-.countdown {
-  width: min(540px, 100%);
-  margin: 0 auto;
-  padding: 22px;
-  border-radius: var(--radius);
-  background: rgba(255, 250, 252, 0.62);
-  box-shadow: var(--shadow);
-  animation: pulse 2.4s ease-in-out infinite;
-}
-
-.countdown-label {
-  display: block;
-  margin-bottom: 14px;
-  font-weight: 700;
-  color: #8b6b64;
-}
-
-.countdown-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.countdown-grid div {
-  padding: 14px 10px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #ffffff, #f6ddea);
-}
-
-.countdown-grid strong {
-  display: block;
-  color: #cc6b9d;
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
-}
-
-.countdown-grid small {
-  font-weight: 700;
-}
-
 .scroll-indicator {
   position: absolute;
   z-index: 2;
@@ -623,14 +584,6 @@ h2 {
   .hero {
     padding-right: 18px;
     padding-left: 18px;
-  }
-
-  .countdown-grid {
-    gap: 8px;
-  }
-
-  .countdown-grid div {
-    padding: 12px 6px;
   }
 
   .card-image {
